@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Tutaj wszystko to co NIEWIDOCZNE na stronie! -->
+        <title>
+            Strona KGW
+        </title>
+        <!-- Podlaczamy plik ze zdefinowanymi stylami CSS-->
+        <link rel = "stylesheet", href ="strona_KGW.css">
+        <link rel = "stylesheet", href ="toolbar.css">
+        <link rel = "stylesheet", href ="carousel.css">
+        <link rel = "stylesheet", href ="layout.css">
+        <!-- Dolaczamy czcionke Philosopher-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- Zawiera wszystko to co ma byc widoczne na naszej stronie! -->
+
+        <!-- NAGLOWEK - DANE KONTAKTOWE -->
+        <p> &#9743 (+11) 111 111 111 &#9993 adres_email.gmail.com
+            <span style="float:right"> link do facebooka/youtuba </span>
+        </p>
+
+        <!-- KARUZELA -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="img/KGW_logo_przyciete.png" style="width:100%">
+              <div class="text">Jakis opis1</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/kwiatek_przyciety.jpg" style="width:100%">
+              <div class="text">Jakis opis2</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/slonce_przyciete.jpg" style="width:100%">
+              <div class="text">Jakis opis3</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+        <!-- GLOWNE MENU-->
+        <ul>
+            <li><a href="#home">Wieści ze wsi</a></li>
+            <li><a href="#news">O nas</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Przykladowe menu</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li>
+        </ul>
+
+        <!-- LAYOUT STRONY: PODZIAL NA 3 SEGMENTY-->
+        <div id="container">
+          <div id="leftSide"></div>
+        
+          <div id="content">
+            <p>Lorem ipsum dolor sit amet. Id atque autem ab perspiciatis voluptatibus eos dolor autem. Sed delectus eaque et quibusdam laborum est nulla aspernatur id exercitationem possimus sed galisum saepe. </p><p>Et distinctio sunt qui odio quidem qui quis consequatur. Qui quidem veniam sed voluptatem delectus qui quas magnam. Est molestiae dolorum qui tempore quaerat ut laborum saepe. </p><p>Aut perferendis voluptatem ut molestiae aperiam est voluptas velit et quibusdam quibusdam aut obcaecati quod. Vel Quis ullam et voluptas commodi et veniam quia sed corporis earum ut fugiat veritatis et voluptatem similique. In corrupti perferendis et iure atque eos dolor repellat et magnam fuga est voluptatem autem. </p><p>Qui harum laborum est aperiam Quis et voluptatem recusandae. Ut sunt sunt non nihil suscipit ut explicabo dolor. Qui inventore ipsam id quibusdam maxime et assumenda galisum eum Quis fugit aut dolorem dolor ab commodi galisum. Sed ducimus distinctio id cupiditate quidem ut mollitia internos sed dolore nesciunt id voluptatem illo et quibusdam porro. </p><p>Ut rerum sint aut vero impedit et veniam cupiditate. Quo consequatur tempora ad quam animi et sequi harum! </p><p>Sit animi quisquam id saepe quas ut molestiae saepe in sunt maiores eum aliquam culpa aut assumenda sapiente aut sapiente perspiciatis. Cum voluptatibus rerum id distinctio amet et voluptatem voluptatem eum quisquam molestiae est libero earum ad architecto inventore est ipsam suscipit. Ut quidem recusandae non asperiores molestiae non corporis rerum sit rerum nihil ut earum neque. Sit labore maxime ad obcaecati labore ut accusamus molestias aut accusantium natus et enim minus cum tempore dignissimos. </p><p>Qui consectetur distinctio aut minus omnis ab quaerat eaque in consequuntur repellat eum quasi consequatur sit voluptates alias. Eum tenetur distinctio a pariatur error id dolor autem ex galisum beatae ea voluptas autem et nemo nisi ea tenetur eius. Ex quia dolore et eius obcaecati ut dolorum cumque aut doloribus excepturi ex repellat perferendis. A sunt tenetur id praesentium architecto non modi excepturi. </p><p>Et debitis officiis et nulla labore eos consequatur vero. In aliquam praesentium est nulla nemo sed enim quas aut velit sint aut porro obcaecati qui galisum maiores. </p><p>Aut voluptatibus optio ut quasi voluptate aut doloremque molestiae quo aperiam consequatur. In similique ullam et beatae iure aut dolorem dolores 33 dolores quam ab expedita saepe. Est itaque voluptatem sed enim debitis ab adipisci molestiae est optio consequatur in reprehenderit rerum sed culpa quasi. Eos quasi natus rem exercitationem necessitatibus in enim voluptas et dignissimos quia aut numquam esse 33 aliquam expedita eos facilis dolor. </p><p>Qui voluptas natus et nobis veritatis vel amet suscipit et obcaecati consequatur. Aut minus neque non ipsa adipisci qui voluptas omnis. Et nihil mollitia sed tempora iure ea distinctio cupiditate qui internos quisquam. </p>
+          </div>
+
+          <div id="rightSide"></div>
+        </div>
+    </body>
+</html>
+
+
+

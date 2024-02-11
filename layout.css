@@ -1,0 +1,18 @@
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  #leftSide {
+    width: 25%;
+    background-color: #f4efe3;
+  }
+  #content {
+    width: 50%;
+    background-color:#e9dfc7;
+  }
+  #rightSide {
+    width: 25%;
+    background-color: #f4efe3;
+  }

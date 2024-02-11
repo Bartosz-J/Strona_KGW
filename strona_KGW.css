@@ -1,0 +1,38 @@
+
+/* zeby zdefiniowac element CSS wewnarz pliku HTML potrzebny jest segment <style> */
+
+.logo_KGW{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    object-position: left;
+    border-style: solid;
+    border-color: red;
+    object-position: top;
+}
+
+.subscribe_button{
+        font-family:Philosopher;
+        background-color: rgb(200,0,0);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 105px;
+        border-radius: 2px;
+        padding-left: 50px;
+        cursor: pointer;
+        margin-left: 105px;
+        transition: opacity 2s,
+            color 1s;
+
+    }
+    .subscribe_button:hover{
+        background-color: blue;
+        opacity: 0.1;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+        
+    }
+    .subscribe_button:active{
+        background-color: green;
+    }
+
